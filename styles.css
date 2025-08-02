@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    background: #fff;
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Carousel Styles */
+.carousel-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.carousel input[type="radio"] {
+    display: none;
+}
+
+.carousel-images {
+    position: relative;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.carousel-image {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#carousel-1:checked ~ .carousel-images .img1,
+#carousel-2:checked ~ .carousel-images .img2,
+#carousel-3:checked ~ .carousel-images .img3 {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.carousel-controls label {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#carousel-1:checked ~ .carousel-controls label[for="carousel-1"],
+#carousel-2:checked ~ .carousel-controls label[for="carousel-2"],
+#carousel-3:checked ~ .carousel-controls label[for="carousel-3"] {
+    background: #333;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .carousel-images {
+        height: 200px;

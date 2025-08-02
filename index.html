@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Basic Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>About</h2>
+            <p>This is a simple website created with HTML and CSS.</p>
+        </section>
+        <section class="carousel-section">
+            <h2>Image Carousel</h2>
+            <div class="carousel">
+                <input type="radio" name="carousel" id="carousel-1" checked>
+                <input type="radio" name="carousel" id="carousel-2">
+                <input type="radio" name="carousel" id="carousel-3">
+
+                <div class="carousel-images">
+                    <div class="carousel-image img1">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Car 1">
+                    </div>
+                    <div class="carousel-image img2">
+                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Car 2">
+                    </div>
+                    <div class="carousel-image img3">
+                        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Car 3">
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <label for="carousel-1"></label>
+                    <label for="carousel-2"></label>
+                    <label for="carousel-3"></label>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Website</p>
+    </footer>
+</body>
+</html>
